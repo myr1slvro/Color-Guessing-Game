@@ -24,7 +24,7 @@ for (let i = 0; i < colorsList.length; i++)
 colors[i].addEventListener("click", function(){
     if (colors[i].style.backgroundColor === correctColor) {
         restartBtn.textContent = "Play Again!"
-        messageEl.textContent = "korik!"
+        messageEl.textContent = "Correct!"
         changeColors(correctColor)
     } else {
         colors[i].style.backgroundColor = "#2C3333"
