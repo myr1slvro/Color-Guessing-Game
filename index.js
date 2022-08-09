@@ -41,7 +41,7 @@ function changeColors(color) {
     for (let i = 0; i < colors.length; i++) {
         headerEl.style.backgroundColor = color
         colors[i].style.backgroundColor = color
-        colors[i].style.opacity = "100%"
+        revealColors()
     }
 }
 
@@ -52,7 +52,14 @@ function restartGame() {
     headerEl.style.backgroundColor = "#A5C9CA"
     restartBtn.textContent = "New Colors"
     messageEl.textContent = ""
+    revealColors()
     setupColors()
+}
+
+function revealColors() {
+    for (let i = 0; i < colors.length; i++) {
+        colors[i].style.opacity = "100%"
+    }
 }
 
 function setupColors() {
